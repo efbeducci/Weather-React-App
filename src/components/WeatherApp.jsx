@@ -21,7 +21,6 @@ export default function WeatherApp () {
 				}&q=${city}&aqi=no`
       )
       const json = await data.json()
-      console.log(json)
 
       setWeather(json)
     } catch (error) {}

@@ -1,8 +1,8 @@
 export default function WeatherMainInfo({ weather }) {
 	return (
 		<div>
-			<div className='grid grid-cols-2 grid-flow-row font-bold font-serif '>
-				<div className="flex justify-start">
+			<div className=' grid grid-cols-2 grid-flow-row font-bold font-jakarta shadow-lg bg-green-50 mt-3 mb-3  border-4 border-l-orange-400 border-t-0 border-r-0 border-b-0'>
+				<div className="flex justify-start ml-1">
                 <p className="md:mt-7 md:text-5xl">{weather?.current.temp_c}º</p>
 					<img className="drop-shadow"
 						src={`http:${weather?.current.condition.icon}`}
@@ -10,14 +10,10 @@ export default function WeatherMainInfo({ weather }) {
 						width='100'
 					/>
 				</div>
-                <div className="flex flex-col justify-end text-right mr-5">
-					<p>{weather?.location.name} - </p>
-					<p>{weather?.location.country}</p>
+                <div className="flex flex-col mt-8 text-center ">
+					<p className="font-bold">{weather?.location.name} - </p>
+					<p className="font-light font-overline">{weather?.location.country}</p>
 				</div>
-			</div>
-
-			<div className="text-left ml-[75px]">
-				<div>{weather?.current.condition.text}</div>
 			</div>
 			<iframe 
                 className="rounded-3xl drop-shadow-2xl md:w-[600px] md:h-[450px] sm:w-[200px] sm:h-[300px]"
@@ -27,7 +23,7 @@ export default function WeatherMainInfo({ weather }) {
 				style={{ border: 0 }}
 				allowFullScreen=''
 				loading='lazy'
-				referrerpolicy='no-referrer-when-downgrade'
+				
                 
 			></iframe>
 		</div>

@@ -4,7 +4,11 @@ module.exports = {
     "./src/**/*.{vue,js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        jakarta: "Plus Jakarta Sans , serif"
+      },
+    },
   },
   plugins: [],
 }
